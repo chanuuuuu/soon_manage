@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/data/ccclogo.ico">
+    <title>Soon Management</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/custom/cover.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 p-2 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">PNUCCC</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover mx-auto flex-column">
+        <div class="card js-card">
+            <div class="card__wrapper">
+              <!-- card 첫 화면 -->
+              <div class="card__side is-active">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">샬롬!</h4>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title">PNUCCC</h2>
+                  <p class="lead">순사역 보고 채널 입니다.</p>
+                  <p class="lead">
+                      <button id='btn'class="btn btn-lg btn-secondary">입장</button>
+                  </p>
+                </div>
+              </div>
+              <!-- card 두번째 화면 -->
+              <div class="card__side card__side--back">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">잠깐!</h4>
+                </div>
+                <div class="card-body">
+                  <form role="form" method='POST' action="{{ url_for('state')}}">
+                    <!--action 안쓰면 현재페이지 url이 그대로 감-->
+                    <fieldset>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="순장님 이름" name="uid" type="text" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="순장님 비밀번호" name="upw" type="password" value="">
+                        </div>
+                        <!-- Change this to a button or input when using this as a form -->
+                        <a class="btn btn-lg btn-secondary" href="{{url_for('state')}}">입장</a>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+  
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Made by <a href="https://getbootstrap.com/">chanwoo</a></p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</body>
+</html>
